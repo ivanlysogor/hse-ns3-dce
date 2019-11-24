@@ -4,11 +4,13 @@ Download from https://www.vagrantup.com/downloads.html and install
 #### Pull repository
 ```git clone https://github.com/ivanlysogor/hse-ns3-dce```
 #### Setup environment
-```vagrant up```
-#### Connect to VM
-```vagrant ssh```
-####
 ```
+cd hse-ns3-dce
+vagrant up
+```
+#### Connect to VM
+```
+vagrant ssh
 $cd dce/source/ns-3-dce/
 $./waf --run dce-iperf
 Waf: Entering directory `/home/vagrant/dce/source/ns-3-dce/build'

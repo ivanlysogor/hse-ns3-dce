@@ -1,48 +1,21 @@
 Vagrant.configure("2") do |config|
-  config.vm.define "rt0" do |server|
-    server.vm.box = "ubuntu/trusty64"
-
-    # for outside world
-    server.vm.network "private_network", ip: "10.10.0.1", netmask: "255.255.255.0"
-    # for inside world
-    server.vm.network "private_network", ip: "172.20.0.1", netmask: "255.255.255.0"
-
-    # do basic setup
-    server.vm.provision "shell", privileged: false, path: "basic-setup.sh"
-
-    # run native bgpd
-    server.vm.provision "shell", path: "run-gobgpd.sh", args: "0"
+  
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 2048
+    v.cpus = 2
   end
 
-  config.vm.define "rt1" do |server|
+  config.vm.define "ns3-dce" do |server|
     server.vm.box = "ubuntu/trusty64"
-
-    # for outside world
-    server.vm.network "private_network", ip: "10.10.0.10", netmask: "255.255.255.0"
-    # for inside world
-    server.vm.network "private_network", ip: "172.20.10.1", netmask: "255.255.255.0"
+    # network
+    # server.vm.network "private_network", ip: "172.16.0.10", netmask: "255.255.255.0"
 
     # do basic setup
-    server.vm.provision "shell", privileged: false, path: "basic-setup.sh"
-
-    # run native bgpd
-    server.vm.provision "shell", path: "run-gobgpd.sh", args: "1"
-  end
-
-  config.vm.define "rt2" do |server|
-    server.vm.box = "ubuntu/trusty64"
-
-    # for outside world
-    server.vm.network "private_network", ip: "10.10.0.20", netmask: "255.255.255.0"
-    # for inside world
-    server.vm.network "private_network", ip: "172.20.20.1", netmask: "255.255.255.0"
+    server.vm.provision "shell", privileged: true, path: "ns3-pre.sh"
 
     # do basic setup
-    server.vm.provision "shell", privileged: false, path: "basic-setup.sh"
+    server.vm.provision "shell", privileged: false, path: "ns3-dce-setup.sh"
 
-    # run native bgpd
-    server.vm.provision "shell", path: "run-gobgpd.sh", args: "2"
   end
-
 
 end

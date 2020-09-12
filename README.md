@@ -1,4 +1,7 @@
 # NS3 DCE Vagrant Environment
+The ojective of this task is to launch NS3 network simulator with DCE support and to research dependency
+between TCP window size and TCP transfer speed.
+
 #### 1.  Setup Vagrant
 Download from https://www.vagrantup.com/downloads.html and install
 #### 2.  Pull repository

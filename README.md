@@ -1,14 +1,14 @@
 # NS3 DCE Vagrant Environment
-####1.  Setup Vagrant
+#### 1.  Setup Vagrant
 Download from https://www.vagrantup.com/downloads.html and install
-####2.  Pull repository
+#### 2.  Pull repository
 ```git clone https://github.com/ivanlysogor/hse-ns3-dce```
-####3. Setup environment
+#### 3. Setup environment
 ```
 cd hse-ns3-dce
 vagrant up
 ```
-####4. Connect to VM
+#### 4. Connect to VM
 ```
 vagrant ssh
 $cd dce/source/ns-3-dce/
@@ -33,7 +33,7 @@ TCP window size:  128 KByte (default)
 $exit
 ```
 
-####5. Change TCP window size to 32 Kbytes and compare transfer speed
+#### 5. Change TCP window size to 32 Kbytes and compare transfer speed
 
-####6. Destroy VM
+#### 6. Destroy VM
 ```vagrant destroy```

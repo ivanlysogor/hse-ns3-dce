@@ -36,8 +36,7 @@ TCP window size:  128 KByte (default)
 $exit
 ```
 
-#### 5. Change TCP window size (to smaller or bigger value) and change link delay. Compare transfer speed and identify
-dependency between TCP window size, link delay and transfer speed
+#### 5. Change TCP window size (to smaller or bigger value) and change link delay. Compare transfer speed and identify dependency between TCP window size, link delay and transfer speed
 
 #### 6. Destroy VM
 ```vagrant destroy```

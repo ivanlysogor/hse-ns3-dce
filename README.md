@@ -39,5 +39,7 @@ $exit
 #### 5. Change TCP window size (to smaller or bigger value) and change link delay. Compare transfer speed and identify dependency between TCP window size, link delay and transfer speed
 You can use ns3 tutorial to get additional information on the ns3 programming - https://www.nsnam.org/docs/release/3.29/tutorial/ns-3-tutorial.pdf
 
+ns3 DCE iperf example located in the ```/home/vagrant/dce/source/ns-3-dce/example``` directory.
+
 #### 6. Destroy VM
 ```vagrant destroy```

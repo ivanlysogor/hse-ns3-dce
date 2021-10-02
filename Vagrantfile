@@ -1,4 +1,6 @@
 Vagrant.configure("2") do |config|
+
+  ENV['LC_ALL']="en_US.UTF-8"
   
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048
@@ -6,7 +8,8 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "ns3-dce" do |server|
-    server.vm.box = "ubuntu/trusty64"
+    server.vm.box = "ubuntu/xenial64"
+
     # network
     # server.vm.network "private_network", ip: "172.16.0.10", netmask: "255.255.255.0"
 

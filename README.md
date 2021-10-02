@@ -4,24 +4,29 @@ between TCP window size and TCP transfer speed.
 
 #### 1.  Setup Vagrant
 Download from https://www.vagrantup.com/downloads.html and install
+
 #### 2.  Pull repository
 ```git clone https://github.com/ivanlysogor/hse-ns3-dce```
+
 #### 3. Setup environment
 ```
 cd hse-ns3-dce
 vagrant up
 ```
+
+NS3 DCE installation manual - https://www.nsnam.org/docs/dce/manual/ns-3-dce-manual.pdf
+
 #### 4. Connect to VM
 ```
 vagrant ssh
-$cd dce/source/ns-3-dce/
-$./waf --run dce-iperf
+$ cd ~/bake/source/ns-3-dce
+$ ./waf --run dce-iperf
 Waf: Entering directory `/home/vagrant/dce/source/ns-3-dce/build'
 [ 10/320] lib/pkgconfig/libns3-dev-netlink-debug.pc:  -> build/lib/pkgconfig/libns3-dev-netlink-debug.pc
 [113/320] lib/pkgconfig/libns3-dev-dce-debug.pc:  -> build/lib/pkgconfig/libns3-dev-dce-debug.pc
 Waf: Leaving directory `/home/vagrant/dce/source/ns-3-dce/build'
 'build' finished successfully (0.191s)
-$cat files-1/var/log/*/*
+$ cat files-1/var/log/*/*
 iperf -s -P 1
 Start Time: NS3 Time:          0s (           +599999999.0ns) , REAL Time: 1574625321
       Time: NS3 Time:          0s (           +599999999.0ns) , REAL Time: 1574625321 --> Starting: /home/vagrant/dce/build/bin/iperf

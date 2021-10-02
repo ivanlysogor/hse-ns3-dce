@@ -1,4 +1,5 @@
 #!/bin/bash
 
 # install packages 
-apt-get -yq install mercurial iperf g++ cmake pkg-config
+apt-get update
+apt-get -yq install iperf g++ cmake pkg-config python3-pip mercurial unzip

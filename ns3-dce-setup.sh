@@ -24,28 +24,6 @@ export DCE_PATH=`pwd`/build/bin_dce:`pwd`/build/sbin
 # mkdir dce
 # cd dce
 
-# Download pybindgen (optional)
-# git clone https://github.com/gjcarneiro/pybindgen.git
-# cd pybindgen
-# python3 setup.py install
-
-# Download ns-3
-# git instructions
-# export GIT_NS3=git@gitlab.com:nsnam/ns-3-dev.git
-# export LAST_VERSION=ns-3.34
-# git clone $GIT_NS3
-# git checkout $LAST_VERSION
-
-# Configure
-# /waf configure --enable-examples -d optimized --prefix=$HOME/dce/install
-
-# Build and install in the directory specified by
-# --prefix parameter
-# ./waf build
-# ./waf install
-
-# finish
-
 whoami
 printenv
 
